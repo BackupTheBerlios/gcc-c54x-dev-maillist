@@ -1,0 +1,418 @@
+From jeffm at fifengr.com  Wed May 11 05:57:27 2005
+From: jeffm at fifengr.com (jeff mathews)
+Date: Tue, 10 May 2005 21:57:27 -0600
+Subject: [gcc-c54x-dev] status
+Message-ID: <a769a37efdd806687c94245daf5d95a6@fifengr.com>
+
+what is the status of this project? dead? active?
+how does the resultant code from gnu-gcc-c54x compare with ti's ccs 
+tools?
+what about support for c55x?
+
+regards,
+jeff mathews
+
+
+
+From btrichter at ucdavis.edu  Wed May 11 10:09:44 2005
+From: btrichter at ucdavis.edu (Bryan Richter)
+Date: Wed, 11 May 2005 01:09:44 -0700
+Subject: [gcc-c54x-dev] status
+In-Reply-To: <a769a37efdd806687c94245daf5d95a6@fifengr.com>
+References: <a769a37efdd806687c94245daf5d95a6@fifengr.com>
+Message-ID: <20050511080944.GC12726@frodo-the-cat>
+
+jeff mathews wrote:
+> what is the status of this project? dead? active?
+
+Active. :) Most the discussion is happening on #gcc-c54x on Freenode. Right now,
+darthgnu (Jonathan) is doing most of the coding, as the rest of us are busy with
+school or work.
+
+
+> how does the resultant code from gnu-gcc-c54x compare with ti's ccs 
+> tools?
+
+Right now, we can hardly generate assembly. The project is still in its infancy.
+
+> what about support for c55x?
+
+As mentioned above, we can hardly generate assembly for one member of the c54x
+family, let alone c55x. :) The first member of the family we are shooting for is
+the 'C5416.
+
+The code can be obtained from the BerliOS svn repository. If you are interested
+in contributing, let me know. 
+
+Thanks,
+
+-Bryan
+
+-- 
+Bryan Richter
+UCDTT President
+UC Davis Undergrad, Physics Dept.
+-
+A PGP signature is (probably) attached to this email. 
+PGP Key ID: BB8E6CCC
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 307 bytes
+Desc: Digital signature
+URL: <https://lists.berlios.de/pipermail/gcc-c54x-dev/attachments/20050511/49fe3f0a/attachment.pgp>
+
+From ramana.radhakrishnan at codito.com  Wed May 11 12:58:07 2005
+From: ramana.radhakrishnan at codito.com (Ramana Radhakrishnan)
+Date: Wed, 11 May 2005 16:28:07 +0530
+Subject: [gcc-c54x-dev] status
+In-Reply-To: <20050511080944.GC12726@frodo-the-cat>
+References: <a769a37efdd806687c94245daf5d95a6@fifengr.com> <20050511080944.GC12726@frodo-the-cat>
+Message-ID: <4281E53F.4050809@codito.com>
+
+Hi,
+
+Heres my first post in sometime. I have been interested in 
+looking at this port for sometime but was too caught up in 
+other stuff .
+
+  Hence spent a little while today digging into the status 
+with c54x.
+
+As I see it :
+
+binutils appears to support the c54x but the testsuite is 
+rather empty . So I am not sure about how broken it is or 
+what are the exact instructions that are supported. The 
+disassembly files used for comparison are close to empty.
+
+Also I was wondering regarding newlib as discussed on irc. 
+newlib is a small library which is typically used for 
+embedded development. Getting a newlib port up should be 
+pretty straightforward.
+
+GCC: I wanted to spin a build today , but being a convicted 
+cvs user could not get around to doing an anonymous checkout 
+using svn.
+
+I tried this:
+
+ramana at arnor:/mnt/tools/fsf/fsfgcc/c54xport/berliosrepos$ 
+svn checkout svn://svn.berlios.de/gcc-c54x/trunk
+svn: URL 'svn://svn.berlios.de/gcc-c54x/trunk' doesn't exist
+
+Then I tried this :
+ramana at arnor:/mnt/tools/fsf/fsfgcc/c54xport/berliosrepos$ 
+svn checkout 
+svn+ssh://svn.berlios.de/svnroot/repos/gcc-c54x/trunk
+anamar at svn.berlios.de's password:
+svn: URL 
+'svn+ssh://svn.berlios.de/svnroot/repos/gcc-c54x/trunk' 
+doesn't exist
+
+
+Is there anything I am doing wrong ?
+
+
+cheers
+Ramana
+
+
+Bryan Richter wrote:
+> jeff mathews wrote:
+> 
+>>what is the status of this project? dead? active?
+> 
+> 
+> Active. :) Most the discussion is happening on #gcc-c54x on Freenode. Right now,
+> darthgnu (Jonathan) is doing most of the coding, as the rest of us are busy with
+> school or work.
+> 
+> 
+> 
+>>how does the resultant code from gnu-gcc-c54x compare with ti's ccs 
+>>tools?
+> 
+> 
+> Right now, we can hardly generate assembly. The project is still in its infancy.
+> 
+> 
+>>what about support for c55x?
+> 
+> 
+> As mentioned above, we can hardly generate assembly for one member of the c54x
+> family, let alone c55x. :) The first member of the family we are shooting for is
+> the 'C5416.
+> 
+> The code can be obtained from the BerliOS svn repository. If you are interested
+> in contributing, let me know. 
+> 
+> Thanks,
+> 
+> -Bryan
+> 
+
+
+-- 
+Ramana Radhakrishnan
+GNU Tools
+codito ergo sum (www.codito.com)
+
+
+
+From btrichter at ucdavis.edu  Wed May 11 16:35:14 2005
+From: btrichter at ucdavis.edu (Bryan Richter)
+Date: Wed, 11 May 2005 07:35:14 -0700
+Subject: [gcc-c54x-dev] status
+In-Reply-To: <4281E53F.4050809@codito.com>
+References: <a769a37efdd806687c94245daf5d95a6@fifengr.com> <20050511080944.GC12726@frodo-the-cat> <4281E53F.4050809@codito.com>
+Message-ID: <20050511143514.GE12726@frodo-the-cat>
+
+Ramana Radhakrishnan wrote:
+> Hi,
+> 
+> Heres my first post in sometime. I have been interested in 
+> looking at this port for sometime but was too caught up in 
+> other stuff .
+> 
+>  Hence spent a little while today digging into the status 
+> with c54x.
+> 
+> As I see it :
+> 
+> binutils appears to support the c54x but the testsuite is 
+> rather empty . So I am not sure about how broken it is or 
+> what are the exact instructions that are supported. The 
+> disassembly files used for comparison are close to empty.
+
+I feared that might be the case.
+
+<snip>
+> 
+> I tried this:
+> 
+> ramana at arnor:/mnt/tools/fsf/fsfgcc/c54xport/berliosrepos$ 
+> svn checkout svn://svn.berlios.de/gcc-c54x/trunk
+> svn: URL 'svn://svn.berlios.de/gcc-c54x/trunk' doesn't exist
+> 
+> Then I tried this :
+> ramana at arnor:/mnt/tools/fsf/fsfgcc/c54xport/berliosrepos$ 
+> svn checkout 
+> svn+ssh://svn.berlios.de/svnroot/repos/gcc-c54x/trunk
+> anamar at svn.berlios.de's password:
+> svn: URL 
+> 'svn+ssh://svn.berlios.de/svnroot/repos/gcc-c54x/trunk' 
+> doesn't exist
+> 
+> 
+> Is there anything I am doing wrong ?
+
+I'm no svn expert, and you are obviously doing what they tell you to do on the
+project website, but to be honest that doesn't look right. I don't remember
+there being a 'trunk'. Testing... Yes, that is right. 
+
+So, in either command, take off "/trunk", e.g.
+    export SVN_SSH="ssh -l <yourname>"
+    svn checkout svn+ssh://svn.berlios.de/svnroot/repos/gcc-c54x
+
+
+I wonder why the instructions have changed, and are wrong...
+
+-Bryan
+
+-- 
+Bryan Richter
+UCDTT President
+UC Davis Undergrad, Physics Dept.
+-
+A PGP signature is (probably) attached to this email. 
+PGP Key ID: BB8E6CCC
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 307 bytes
+Desc: Digital signature
+URL: <https://lists.berlios.de/pipermail/gcc-c54x-dev/attachments/20050511/5ee6167e/attachment.pgp>
+
+From ramana.radhakrishnan at codito.com  Wed May 11 22:49:34 2005
+From: ramana.radhakrishnan at codito.com (Ramana Radhakrishnan)
+Date: Thu, 12 May 2005 02:19:34 +0530 (IST)
+Subject: [gcc-c54x-dev] status
+In-Reply-To: <20050511143514.GE12726@frodo-the-cat>
+References: <a769a37efdd806687c94245daf5d95a6@fifengr.com>
+    <20050511080944.GC12726@frodo-the-cat> <4281E53F.4050809@codito.com>
+    <20050511143514.GE12726@frodo-the-cat>
+Message-ID: <32834.203.212.198.151.1115844574.squirrel@webmail.codito.com>
+
+Hi,
+
+<snip>
+
+>
+> I'm no svn expert, and you are obviously doing what they tell you to do on
+> the
+> project website, but to be honest that doesn't look right. I don't
+> remember
+> there being a 'trunk'. Testing... Yes, that is right.
+>
+> So, in either command, take off "/trunk", e.g.
+>     export SVN_SSH="ssh -l <yourname>"
+>     svn checkout svn+ssh://svn.berlios.de/svnroot/repos/gcc-c54x
+>
+
+I tried everything but remove the trunk .
+
+>
+> I wonder why the instructions have changed, and are wrong...
+
+Yeah maybe you need to correct the site. Will give this a shot sometime
+tomorrow. Time to hit the sack .
+
+cheers
+Ramana
+
+
+> --
+> Bryan Richter
+> UCDTT President
+> UC Davis Undergrad, Physics Dept.
+> -
+> A PGP signature is (probably) attached to this email.
+> PGP Key ID: BB8E6CCC
+>
+
+
+----
+Ramana Radhakrishnan
+Codito Technologies
+
+
+
+From joe at dastyle.net  Wed May 11 17:02:38 2005
+From: joe at dastyle.net (Jonathan Bastien-Filiatrault)
+Date: Wed, 11 May 2005 11:02:38 -0400
+Subject: [gcc-c54x-dev] status
+In-Reply-To: <20050511143514.GE12726@frodo-the-cat>
+References: <a769a37efdd806687c94245daf5d95a6@fifengr.com>
+ <20050511080944.GC12726@frodo-the-cat> <4281E53F.4050809@codito.com>
+ <20050511143514.GE12726@frodo-the-cat>
+Message-ID: <42821E8E.4010803@dastyle.net>
+
+Bryan Richter wrote:
+
+>Ramana Radhakrishnan wrote:
+>  
+>
+>>Hi,
+>>
+>>Heres my first post in sometime. I have been interested in 
+>>looking at this port for sometime but was too caught up in 
+>>other stuff .
+>>
+>> Hence spent a little while today digging into the status 
+>>with c54x.
+>>
+>>As I see it :
+>>
+>>binutils appears to support the c54x but the testsuite is 
+>>rather empty . So I am not sure about how broken it is or 
+>>what are the exact instructions that are supported. The 
+>>disassembly files used for comparison are close to empty.
+>>    
+>>
+>
+>I feared that might be the case.
+>
+><snip>
+>  
+>
+>>I tried this:
+>>
+>>ramana at arnor:/mnt/tools/fsf/fsfgcc/c54xport/berliosrepos$ 
+>>svn checkout svn://svn.berlios.de/gcc-c54x/trunk
+>>svn: URL 'svn://svn.berlios.de/gcc-c54x/trunk' doesn't exist
+>>
+>>Then I tried this :
+>>ramana at arnor:/mnt/tools/fsf/fsfgcc/c54xport/berliosrepos$ 
+>>svn checkout 
+>>svn+ssh://svn.berlios.de/svnroot/repos/gcc-c54x/trunk
+>>anamar at svn.berlios.de's password:
+>>svn: URL 
+>>'svn+ssh://svn.berlios.de/svnroot/repos/gcc-c54x/trunk' 
+>>doesn't exist
+>>
+>>
+>>Is there anything I am doing wrong ?
+>>    
+>>
+>
+>I'm no svn expert, and you are obviously doing what they tell you to do on the
+>project website, but to be honest that doesn't look right. I don't remember
+>there being a 'trunk'. Testing... Yes, that is right. 
+>
+>So, in either command, take off "/trunk", e.g.
+>    export SVN_SSH="ssh -l <yourname>"
+>    svn checkout svn+ssh://svn.berlios.de/svnroot/repos/gcc-c54x
+>
+>
+>I wonder why the instructions have changed, and are wrong...
+>
+>-Bryan
+>
+>  
+>
+The instructions represent a "standard" svn repository, I have moved
+files around to reflect that. The berlios instructions are correct and
+should work now.
+
+Cheers,
+Jonathan
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 256 bytes
+Desc: OpenPGP digital signature
+URL: <https://lists.berlios.de/pipermail/gcc-c54x-dev/attachments/20050511/4b82d4b9/attachment.pgp>
+
+From joe at dastyle.net  Wed May 11 16:02:29 2005
+From: joe at dastyle.net (Jonathan Bastien-Filiatrault)
+Date: Wed, 11 May 2005 10:02:29 -0400
+Subject: [gcc-c54x-dev] status
+In-Reply-To: <a769a37efdd806687c94245daf5d95a6@fifengr.com>
+References: <a769a37efdd806687c94245daf5d95a6@fifengr.com>
+Message-ID: <42821075.2080207@dastyle.net>
+
+jeff mathews wrote:
+
+> what is the status of this project? dead? active?
+> how does the resultant code from gnu-gcc-c54x compare with ti's ccs
+> tools?
+> what about support for c55x?
+>
+> regards,
+> jeff mathews
+
+Hi,
+This project is pretty much active, we are doing the best we can to get
+something together. If you want, look into our svn repository on
+gcc-c54x.berlios.de . Right now, the compiler _can_ generate _some_
+correct assembly code for 3-line programs, it even assembles and links,
+but it crashes on complicated programs (right now, it can't handle a
+"if"). One thing we are missing is experience with GCC, we hope some GCC
+guru will join in at some point to help polish the port. If we do not
+get this help, we can learn, but it will take a lot longer. A good part
+of the discussion goes on IRC at #gcc-c54x on freenode.
+
+Feel free to contribute,
+Jonathan
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 256 bytes
+Desc: OpenPGP digital signature
+URL: <https://lists.berlios.de/pipermail/gcc-c54x-dev/attachments/20050511/5df0b2ac/attachment.pgp>
+

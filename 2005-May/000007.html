@@ -1,0 +1,126 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [gcc-c54x-dev] status
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/gcc-c54x-dev/2005-May/index.html" >
+   <LINK REL="made" HREF="mailto:gcc-c54x-dev%40lists.berlios.de?Subject=Re%3A%20%5Bgcc-c54x-dev%5D%20status&In-Reply-To=%3C20050511143514.GE12726%40frodo-the-cat%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000006.html">
+   <LINK REL="Next"  HREF="000009.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[gcc-c54x-dev] status</H1>
+    <B>Bryan Richter</B> 
+    <A HREF="mailto:gcc-c54x-dev%40lists.berlios.de?Subject=Re%3A%20%5Bgcc-c54x-dev%5D%20status&In-Reply-To=%3C20050511143514.GE12726%40frodo-the-cat%3E"
+       TITLE="[gcc-c54x-dev] status">btrichter at ucdavis.edu
+       </A><BR>
+    <I>Wed May 11 16:35:14 CEST 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000006.html">[gcc-c54x-dev] status
+</A></li>
+        <LI>Next message: <A HREF="000009.html">[gcc-c54x-dev] status
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#7">[ date ]</a>
+              <a href="thread.html#7">[ thread ]</a>
+              <a href="subject.html#7">[ subject ]</a>
+              <a href="author.html#7">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Ramana Radhakrishnan wrote:
+&gt;<i> Hi,
+</I>&gt;<i> 
+</I>&gt;<i> Heres my first post in sometime. I have been interested in 
+</I>&gt;<i> looking at this port for sometime but was too caught up in 
+</I>&gt;<i> other stuff .
+</I>&gt;<i> 
+</I>&gt;<i>  Hence spent a little while today digging into the status 
+</I>&gt;<i> with c54x.
+</I>&gt;<i> 
+</I>&gt;<i> As I see it :
+</I>&gt;<i> 
+</I>&gt;<i> binutils appears to support the c54x but the testsuite is 
+</I>&gt;<i> rather empty . So I am not sure about how broken it is or 
+</I>&gt;<i> what are the exact instructions that are supported. The 
+</I>&gt;<i> disassembly files used for comparison are close to empty.
+</I>
+I feared that might be the case.
+
+&lt;snip&gt;
+&gt;<i> 
+</I>&gt;<i> I tried this:
+</I>&gt;<i> 
+</I>&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/gcc-c54x-dev">ramana at arnor</A>:/mnt/tools/fsf/fsfgcc/c54xport/berliosrepos$ 
+</I>&gt;<i> svn checkout <A HREF="svn://svn.berlios.de/gcc-c54x/trunk">svn://svn.berlios.de/gcc-c54x/trunk</A>
+</I>&gt;<i> svn: URL '<A HREF="svn://svn.berlios.de/gcc-c54x/trunk">svn://svn.berlios.de/gcc-c54x/trunk</A>' doesn't exist
+</I>&gt;<i> 
+</I>&gt;<i> Then I tried this :
+</I>&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/gcc-c54x-dev">ramana at arnor</A>:/mnt/tools/fsf/fsfgcc/c54xport/berliosrepos$ 
+</I>&gt;<i> svn checkout 
+</I>&gt;<i> svn+<A HREF="ssh://svn.berlios.de/svnroot/repos/gcc-c54x/trunk">ssh://svn.berlios.de/svnroot/repos/gcc-c54x/trunk</A>
+</I>&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/gcc-c54x-dev">anamar at svn.berlios.de</A>'s password:
+</I>&gt;<i> svn: URL 
+</I>&gt;<i> 'svn+<A HREF="ssh://svn.berlios.de/svnroot/repos/gcc-c54x/trunk">ssh://svn.berlios.de/svnroot/repos/gcc-c54x/trunk</A>' 
+</I>&gt;<i> doesn't exist
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Is there anything I am doing wrong ?
+</I>
+I'm no svn expert, and you are obviously doing what they tell you to do on the
+project website, but to be honest that doesn't look right. I don't remember
+there being a 'trunk'. Testing... Yes, that is right. 
+
+So, in either command, take off &quot;/trunk&quot;, e.g.
+    export SVN_SSH=&quot;ssh -l &lt;yourname&gt;&quot;
+    svn checkout svn+<A HREF="ssh://svn.berlios.de/svnroot/repos/gcc-c54x">ssh://svn.berlios.de/svnroot/repos/gcc-c54x</A>
+
+
+I wonder why the instructions have changed, and are wrong...
+
+-Bryan
+
+-- 
+Bryan Richter
+UCDTT President
+UC Davis Undergrad, Physics Dept.
+-
+A PGP signature is (probably) attached to this email. 
+PGP Key ID: BB8E6CCC
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 307 bytes
+Desc: Digital signature
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/gcc-c54x-dev/attachments/20050511/5ee6167e/attachment.pgp">https://lists.berlios.de/pipermail/gcc-c54x-dev/attachments/20050511/5ee6167e/attachment.pgp</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000006.html">[gcc-c54x-dev] status
+</A></li>
+	<LI>Next message: <A HREF="000009.html">[gcc-c54x-dev] status
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#7">[ date ]</a>
+              <a href="thread.html#7">[ thread ]</a>
+              <a href="subject.html#7">[ subject ]</a>
+              <a href="author.html#7">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/gcc-c54x-dev">More information about the gcc-c54x-dev
+mailing list</a><br>
+</body></html>

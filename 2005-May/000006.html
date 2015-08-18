@@ -1,0 +1,149 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [gcc-c54x-dev] status
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/gcc-c54x-dev/2005-May/index.html" >
+   <LINK REL="made" HREF="mailto:gcc-c54x-dev%40lists.berlios.de?Subject=Re%3A%20%5Bgcc-c54x-dev%5D%20status&In-Reply-To=%3C4281E53F.4050809%40codito.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000005.html">
+   <LINK REL="Next"  HREF="000007.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[gcc-c54x-dev] status</H1>
+    <B>Ramana Radhakrishnan</B> 
+    <A HREF="mailto:gcc-c54x-dev%40lists.berlios.de?Subject=Re%3A%20%5Bgcc-c54x-dev%5D%20status&In-Reply-To=%3C4281E53F.4050809%40codito.com%3E"
+       TITLE="[gcc-c54x-dev] status">ramana.radhakrishnan at codito.com
+       </A><BR>
+    <I>Wed May 11 12:58:07 CEST 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000005.html">[gcc-c54x-dev] status
+</A></li>
+        <LI>Next message: <A HREF="000007.html">[gcc-c54x-dev] status
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#6">[ date ]</a>
+              <a href="thread.html#6">[ thread ]</a>
+              <a href="subject.html#6">[ subject ]</a>
+              <a href="author.html#6">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi,
+
+Heres my first post in sometime. I have been interested in 
+looking at this port for sometime but was too caught up in 
+other stuff .
+
+  Hence spent a little while today digging into the status 
+with c54x.
+
+As I see it :
+
+binutils appears to support the c54x but the testsuite is 
+rather empty . So I am not sure about how broken it is or 
+what are the exact instructions that are supported. The 
+disassembly files used for comparison are close to empty.
+
+Also I was wondering regarding newlib as discussed on irc. 
+newlib is a small library which is typically used for 
+embedded development. Getting a newlib port up should be 
+pretty straightforward.
+
+GCC: I wanted to spin a build today , but being a convicted 
+cvs user could not get around to doing an anonymous checkout 
+using svn.
+
+I tried this:
+
+<A HREF="https://lists.berlios.de/mailman/listinfo/gcc-c54x-dev">ramana at arnor</A>:/mnt/tools/fsf/fsfgcc/c54xport/berliosrepos$ 
+svn checkout <A HREF="svn://svn.berlios.de/gcc-c54x/trunk">svn://svn.berlios.de/gcc-c54x/trunk</A>
+svn: URL '<A HREF="svn://svn.berlios.de/gcc-c54x/trunk">svn://svn.berlios.de/gcc-c54x/trunk</A>' doesn't exist
+
+Then I tried this :
+<A HREF="https://lists.berlios.de/mailman/listinfo/gcc-c54x-dev">ramana at arnor</A>:/mnt/tools/fsf/fsfgcc/c54xport/berliosrepos$ 
+svn checkout 
+svn+<A HREF="ssh://svn.berlios.de/svnroot/repos/gcc-c54x/trunk">ssh://svn.berlios.de/svnroot/repos/gcc-c54x/trunk</A>
+<A HREF="https://lists.berlios.de/mailman/listinfo/gcc-c54x-dev">anamar at svn.berlios.de</A>'s password:
+svn: URL 
+'svn+<A HREF="ssh://svn.berlios.de/svnroot/repos/gcc-c54x/trunk">ssh://svn.berlios.de/svnroot/repos/gcc-c54x/trunk</A>' 
+doesn't exist
+
+
+Is there anything I am doing wrong ?
+
+
+cheers
+Ramana
+
+
+Bryan Richter wrote:
+&gt;<i> jeff mathews wrote:
+</I>&gt;<i> 
+</I>&gt;&gt;<i>what is the status of this project? dead? active?
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Active. :) Most the discussion is happening on #gcc-c54x on Freenode. Right now,
+</I>&gt;<i> darthgnu (Jonathan) is doing most of the coding, as the rest of us are busy with
+</I>&gt;<i> school or work.
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;&gt;<i>how does the resultant code from gnu-gcc-c54x compare with ti's ccs 
+</I>&gt;&gt;<i>tools?
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Right now, we can hardly generate assembly. The project is still in its infancy.
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;&gt;<i>what about support for c55x?
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> As mentioned above, we can hardly generate assembly for one member of the c54x
+</I>&gt;<i> family, let alone c55x. :) The first member of the family we are shooting for is
+</I>&gt;<i> the 'C5416.
+</I>&gt;<i> 
+</I>&gt;<i> The code can be obtained from the BerliOS svn repository. If you are interested
+</I>&gt;<i> in contributing, let me know. 
+</I>&gt;<i> 
+</I>&gt;<i> Thanks,
+</I>&gt;<i> 
+</I>&gt;<i> -Bryan
+</I>&gt;<i> 
+</I>
+
+-- 
+Ramana Radhakrishnan
+GNU Tools
+codito ergo sum (www.codito.com)
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000005.html">[gcc-c54x-dev] status
+</A></li>
+	<LI>Next message: <A HREF="000007.html">[gcc-c54x-dev] status
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#6">[ date ]</a>
+              <a href="thread.html#6">[ thread ]</a>
+              <a href="subject.html#6">[ subject ]</a>
+              <a href="author.html#6">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/gcc-c54x-dev">More information about the gcc-c54x-dev
+mailing list</a><br>
+</body></html>

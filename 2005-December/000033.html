@@ -1,0 +1,142 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [gcc-c54x-dev] gdspsim, qemu
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/gcc-c54x-dev/2005-December/index.html" >
+   <LINK REL="made" HREF="mailto:gcc-c54x-dev%40lists.berlios.de?Subject=Re%3A%20%5Bgcc-c54x-dev%5D%20gdspsim%2C%20qemu&In-Reply-To=%3C20051215.154715.74751531.apm%40brigitte.dna.fi%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   
+   <LINK REL="Next"  HREF="000034.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[gcc-c54x-dev] gdspsim, qemu</H1>
+    <B>Antti P Miettinen</B> 
+    <A HREF="mailto:gcc-c54x-dev%40lists.berlios.de?Subject=Re%3A%20%5Bgcc-c54x-dev%5D%20gdspsim%2C%20qemu&In-Reply-To=%3C20051215.154715.74751531.apm%40brigitte.dna.fi%3E"
+       TITLE="[gcc-c54x-dev] gdspsim, qemu">ananaza at iki.fi
+       </A><BR>
+    <I>Thu Dec 15 14:47:15 CET 2005</I>
+    <P><UL>
+        
+        <LI>Next message: <A HREF="000034.html">[gcc-c54x-dev] gdspsim, qemu
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#33">[ date ]</a>
+              <a href="thread.html#33">[ thread ]</a>
+              <a href="subject.html#33">[ subject ]</a>
+              <a href="author.html#33">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>I sent Sam Couter the below, but as Sam no longer seems to be
+interesed in gcc-c54x, I'm relaying this to the list in case someone
+is interested. I'm not on the list - I hope this gets through..
+
+---8&lt;---8&lt;---8&lt;---8&lt;---8&lt;---8&lt;---8&lt;---8&lt;---8&lt;---8&lt;---8&lt;---
+
+Hello,
+
+I read from the gcc-c54x-dev archive at
+
+<A HREF="../2005-June/000015.html">http://lists.berlios.de/pipermail/gcc-c54x-dev/2005-June/000015.html</A>
+
+that you were unable to run the test program included in gdspsim. The
+gdspsim code base seems a bit oldish but I did manage to get it
+running, i.e. I can step through the test program and it ends up into
+the &quot;passed&quot; loop.
+
+All I had to do was to make it compile and rearrange the link line so
+that the app gets resolved first against the right gtk. I'm attaching
+a diff.
+
+Have you considered qemu as a simulator framework? I know it is sort
+of a simplification to say this, but in principle, all that is needed
+for supporting a particular CPU inside qemu, is to be able to
+dissassemble the object code. In return you get very fast
+emulation :)
+
+-------------- next part --------------
+? c54/gdspsim
+? gdspsim/test/test1.out
+Index: c54/Makefile
+===================================================================
+RCS file: /cvsroot/gdspsim/gdspsim/c54/Makefile,v
+retrieving revision 1.4
+diff -u -r1.4 Makefile
+--- c54/Makefile	13 Jul 2002 17:17:40 -0000	1.4
++++ c54/Makefile	14 Dec 2005 20:22:28 -0000
+@@ -179,12 +179,12 @@
+ 
+ #$(OBJS):	$(SRCS) $(DEPS)
+ .c.o:
+-	$(CC) -Wall -ggdb -I../c54 -I../gdspsim -I. -I.. `pkg-config gnome gtk+ --cflags`   -c -D_C54 $&lt;
++	$(CC) -Wall -ggdb -I../c54 -I../gdspsim -I. -I.. `pkg-config libgnome-2.0 gtk+ --cflags`   -c -D_C54 $&lt;
+ 
+ all:	$(PROGRAM)
+ 
+ $(PROGRAM):	$(OBJS)
+-		$(CC) `pkg-config gnome gtk+ --libs` -o $(PROGRAM) $(OBJS) -lgtkextra
++		$(CC) `pkg-config gtk+ libgnome-2.0 --libs` -o $(PROGRAM) $(OBJS) -lgtkextra
+ 		@echo &quot;done&quot;
+ #		$(CC) -rdynamic `pkg-config gtk+  --libs`  -lgtkextra -o $(PROGRAM) $(OBJS)
+ 
+Index: gdspsim/main.c
+===================================================================
+RCS file: /cvsroot/gdspsim/gdspsim/gdspsim/main.c,v
+retrieving revision 1.16
+diff -u -r1.16 main.c
+--- gdspsim/main.c	7 May 2003 02:34:52 -0000	1.16
++++ gdspsim/main.c	14 Dec 2005 20:22:29 -0000
+@@ -29,7 +29,7 @@
+ #include &lt;pipeline.h&gt;
+ #include &lt;fileIO.h&gt;
+ #include &lt;preferences.h&gt;
+-#include &lt;gnome.h&gt;
++#include &lt;libgnome/libgnome.h&gt;
+ 
+ extern struct _file_info *gdsp_file_nfo;
+ struct _Registers *Registers;
+@@ -75,13 +75,13 @@
+ {
+   gchar *helpfile;
+ 
+-  helpfile = gnome_help_file_find_file(&quot;gdspsim&quot;,&quot;gdspsim.html&quot;);
++  helpfile = 0; /*gnome_help_file_find_file(&quot;gdspsim&quot;,&quot;gdspsim.html&quot;);*/
+   if (helpfile != NULL)
+     {
+       gchar *url;
+ 
+       url = g_strconcat(&quot;file:&quot;,helpfile,NULL);
+-      gnome_help_goto(NULL,url);
++      //gnome_help_goto(NULL,url);
+       g_free(url);
+       g_free(helpfile);
+     }
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	<LI>Next message: <A HREF="000034.html">[gcc-c54x-dev] gdspsim, qemu
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#33">[ date ]</a>
+              <a href="thread.html#33">[ thread ]</a>
+              <a href="subject.html#33">[ subject ]</a>
+              <a href="author.html#33">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/gcc-c54x-dev">More information about the gcc-c54x-dev
+mailing list</a><br>
+</body></html>

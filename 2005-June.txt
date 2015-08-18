@@ -1,0 +1,239 @@
+From btrichter at ucdavis.edu  Thu Jun 16 05:09:00 2005
+From: btrichter at ucdavis.edu (Bryan Richter)
+Date: Wed, 15 Jun 2005 20:09:00 -0700
+Subject: [gcc-c54x-dev] progress report
+Message-ID: <20050616030900.GA2736@frodo-the-cat>
+
+Hi everyone, I just wanted to let you know I'm not dead. :) School was very busy
+as I finished up, but I am done now, and although I have a Real Job working 40
+hours a week, I should actually have more organized free time, and I hope to
+continue contributing to this project.
+
+In the two months that I have more or less done nothing, I lost track of our
+current status. I am going to write a progress report by tomorrow, and although
+I am obviously going to read through the code to get a feel for our position, if
+anyone (especially you, Jonathan) has something you think I should add to the
+report, please let me know.
+
+I must have the report done by tomorrow at 12 noon, Pacific time. :) Hopefully
+this isn't too late to write.
+
+Thank you very much,
+
+-Bryan
+
+-- 
+Bryan Richter
+Linux Ninja-in-training
+-
+A PGP signature is (probably) attached to this email. 
+PGP Key ID: BB8E6CCC
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 307 bytes
+Desc: Digital signature
+URL: <https://lists.berlios.de/pipermail/gcc-c54x-dev/attachments/20050615/0a7608f2/attachment.pgp>
+
+From btrichter at ucdavis.edu  Thu Jun 16 07:12:24 2005
+From: btrichter at ucdavis.edu (Bryan Richter)
+Date: Wed, 15 Jun 2005 22:12:24 -0700
+Subject: [gcc-c54x-dev] progress report
+In-Reply-To: <20050616030900.GA2736@frodo-the-cat>
+References: <20050616030900.GA2736@frodo-the-cat>
+Message-ID: <20050616051224.GB2736@frodo-the-cat>
+
+I have added my reports to svn. The new one, of course, is the spring quarter
+one. Let me know what you think of it.
+
+Thanks,
+
+-Bryan
+
+-- 
+Bryan Richter
+-
+A PGP signature is (probably) attached to this email. 
+PGP Key ID: BB8E6CCC
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 307 bytes
+Desc: Digital signature
+URL: <https://lists.berlios.de/pipermail/gcc-c54x-dev/attachments/20050615/93ea0915/attachment.pgp>
+
+From joe at dastyle.net  Thu Jun 16 18:16:39 2005
+From: joe at dastyle.net (Jonathan Bastien-Filiatrault)
+Date: Thu, 16 Jun 2005 12:16:39 -0400
+Subject: [gcc-c54x-dev] progress report
+In-Reply-To: <20050616051224.GB2736@frodo-the-cat>
+References: <20050616030900.GA2736@frodo-the-cat>
+ <20050616051224.GB2736@frodo-the-cat>
+Message-ID: <42B1A5E7.1070707@dastyle.net>
+
+Bryan Richter wrote:
+
+>I have added my reports to svn. The new one, of course, is the spring quarter
+>one. Let me know what you think of it.
+>  
+>
+Looking good, you may want to add that Nokia is also helping us out. 
+Paul "lethal" Mundt, of Nokia Finland, will send us some development 
+units for the Nokia 770 Internet tablet. Also there has been some 
+discussion between Joe Born and Scott Robert Ladd (blog: 
+http://chaoticcoyote.blogspot.com/ ). Scott has a lot of experience with 
+GCC which should bring us up to another milestone for the port. Also, 
+Paul has a friend, his name on IRC is "mrbrown", even though I have not 
+been able to contact him, Paul told me that he knows a great deal about 
+GCC. Nokia will also put some funds aside to help fund the project 
+(mostly for TMS320C55x support).
+
+Cheers,
+Jonathan
+
+
+From ramana.radhakrishnan at codito.com  Mon Jun 20 13:10:50 2005
+From: ramana.radhakrishnan at codito.com (Ramana Radhakrishnan)
+Date: Mon, 20 Jun 2005 16:40:50 +0530
+Subject: [gcc-c54x-dev] progress report
+In-Reply-To: <42B1A5E7.1070707@dastyle.net>
+References: <20050616030900.GA2736@frodo-the-cat>
+	 <20050616051224.GB2736@frodo-the-cat>  <42B1A5E7.1070707@dastyle.net>
+Message-ID: <1119265850.21786.20.camel@localhost.localdomain>
+
+On Thu, 2005-06-16 at 12:16 -0400, Jonathan Bastien-Filiatrault wrote:
+> Bryan Richter wrote:
+> 
+> >I have added my reports to svn. The new one, of course, is the spring quarter
+> >one. Let me know what you think of it.
+> >  
+> >
+> Looking good, you may want to add that Nokia is also helping us out. 
+> Paul "lethal" Mundt, of Nokia Finland, will send us some development 
+> units for the Nokia 770 Internet tablet. Also there has been some 
+> discussion between Joe Born and Scott Robert Ladd (blog: 
+> http://chaoticcoyote.blogspot.com/ ). Scott has a lot of experience with 
+> GCC which should bring us up to another milestone for the port. Also, 
+> Paul has a friend, his name on IRC is "mrbrown", even though I have not 
+> been able to contact him, Paul told me that he knows a great deal about 
+> GCC. Nokia will also put some funds aside to help fund the project 
+> (mostly for TMS320C55x support).
+
+Whats the status with newlib / binutils ? Last time I checked I ran into
+a few issues there. Also I could not find any open source simulator yet
+for the c54x ? Is there something setup for testing et al . We ought to
+start with getting the testsuite up or is there already something set
+up. 
+
+I would also like to contribute some free time towards this . Sorry
+about not writing earlier, have been really busy with other stuff. 
+
+cheers
+Ramana
+
+
+> 
+> Cheers,
+> Jonathan
+> _______________________________________________
+> gcc-c54x-dev mailing list
+> gcc-c54x-dev at lists.berlios.de
+> http://lists.berlios.de/mailman/listinfo/gcc-c54x-dev
+
+
+
+From sam at couter.dropbear.id.au  Mon Jun 20 14:28:23 2005
+From: sam at couter.dropbear.id.au (Sam Couter)
+Date: Mon, 20 Jun 2005 22:28:23 +1000
+Subject: [gcc-c54x-dev] progress report
+In-Reply-To: <1119265850.21786.20.camel@localhost.localdomain>
+References: <20050616030900.GA2736@frodo-the-cat> <20050616051224.GB2736@frodo-the-cat> <42B1A5E7.1070707@dastyle.net> <1119265850.21786.20.camel@localhost.localdomain>
+Message-ID: <20050620122822.GG6903@yosamite.tekno.house>
+
+Ramana Radhakrishnan <ramana.radhakrishnan at codito.com> wrote:
+> Also I could not find any open source simulator yet
+> for the c54x ?
+
+There is gdspsim. I've had no success with it so far though. The
+included test1.asm assembles using c54x-as and links with c54x-ld (I
+don't know how to verify that what I get is valid), but gdspsim crashes
+when I try to run the resulting executable. No idea which of binutils or
+gdspsim (or both?) is at fault.
+-- 
+Sam "Eddie" Couter  |  mailto:sam at couter.dropbear.id.au
+Debian Developer    |  mailto:eddie at debian.org
+                    |  jabber:sam at teknohaus.dyndns.org
+OpenPGP fingerprint:  A46B 9BB5 3148 7BEA 1F05  5BD5 8530 03AE DE89 C75C
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 189 bytes
+Desc: Digital signature
+URL: <https://lists.berlios.de/pipermail/gcc-c54x-dev/attachments/20050620/6445298d/attachment.pgp>
+
+From ramana.radhakrishnan at codito.com  Mon Jun 20 15:16:45 2005
+From: ramana.radhakrishnan at codito.com (Ramana Radhakrishnan)
+Date: Mon, 20 Jun 2005 18:46:45 +0530
+Subject: [gcc-c54x-dev] progress report
+In-Reply-To: <20050620122822.GG6903@yosamite.tekno.house>
+References: <20050616030900.GA2736@frodo-the-cat>
+	 <20050616051224.GB2736@frodo-the-cat> <42B1A5E7.1070707@dastyle.net>
+	 <1119265850.21786.20.camel@localhost.localdomain>
+	 <20050620122822.GG6903@yosamite.tekno.house>
+Message-ID: <1119273406.21786.58.camel@localhost.localdomain>
+
+On Mon, 2005-06-20 at 22:28 +1000, Sam Couter wrote:
+> Ramana Radhakrishnan <ramana.radhakrishnan at codito.com> wrote:
+> > Also I could not find any open source simulator yet
+> > for the c54x ?
+> 
+> There is gdspsim. I've had no success with it so far though. The
+> included test1.asm assembles using c54x-as and links with c54x-ld (I
+> don't know how to verify that what I get is valid), but gdspsim crashes
+> when I try to run the resulting executable. No idea which of binutils or
+> gdspsim (or both?) is at fault.
+
+Honestly ,one of the first things we need to look at is getting a
+simulator for this up and running and identify if the problem is with
+the sim or binutils / look at the existence of a simulator for this. 
+cheers
+Ramana
+
+
+
+From ramana.radhakrishnan at codito.com  Thu Jun 23 19:49:38 2005
+From: ramana.radhakrishnan at codito.com (Ramana Radhakrishnan)
+Date: Thu, 23 Jun 2005 23:19:38 +0530
+Subject: [gcc-c54x-dev] PATCH - Obvious cleanup.
+Message-ID: <1119548978.15278.72.camel@localhost.localdomain>
+
+Hi, 
+
+Something that I hit while trying to build c54x-coff  with gcc-2.95. The
+local apt proxy here is broken for gcc 3.3 and I have an option of
+either good ol' 2.95 or 4.0 running on my laptop. 
+
+It just reorders the declaration of tree param  . 
+
+Please apply as obvious. Don't have write permissions yet. 
+
+cheers
+Ramana
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: c54x-tri-patch
+Type: text/x-patch
+Size: 994 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/gcc-c54x-dev/attachments/20050623/91437c05/attachment.bin>
+-------------- next part --------------
+2005-06-23  Ramana Radhakrishnan <ramana at codito.com>
+
+	* config/c54x/c54x.c(init_cumulative_args):Correct
+	declaration order for param etc. 
+	Whitespace fixes too.
+
+

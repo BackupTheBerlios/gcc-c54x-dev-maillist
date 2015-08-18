@@ -1,0 +1,149 @@
+From btrichter at ucdavis.edu  Sat Apr 23 02:36:05 2005
+From: btrichter at ucdavis.edu (Bryan Richter)
+Date: Fri, 22 Apr 2005 17:36:05 -0700
+Subject: [Gcc-c54x-dev] test
+Message-ID: <20050423003605.GB20864@frodo-the-cat>
+
+Test!
+w:
+-- 
+Bryan Richter
+UCDTT President
+UC Davis Undergrad, Physics Dept.
+-
+A PGP signature is (probably) attached to this email. 
+PGP Key ID: BB8E6CCC
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 307 bytes
+Desc: Digital signature
+URL: <https://lists.berlios.de/pipermail/gcc-c54x-dev/attachments/20050422/c081ed90/attachment.pgp>
+
+From btrichter at ucdavis.edu  Sat Apr 23 03:17:43 2005
+From: btrichter at ucdavis.edu (Bryan Richter)
+Date: Fri, 22 Apr 2005 18:17:43 -0700
+Subject: [gcc-c54x-dev] test 2
+Message-ID: <20050423011743.GA21368@frodo-the-cat>
+
+It should work this time; Apparently list admins don't get messages, so I had to
+add myself manually. :)
+
+-Bryan
+
+-- 
+Bryan Richter
+UCDTT President
+UC Davis Undergrad, Physics Dept.
+-
+A PGP signature is (probably) attached to this email. 
+PGP Key ID: BB8E6CCC
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 307 bytes
+Desc: Digital signature
+URL: <https://lists.berlios.de/pipermail/gcc-c54x-dev/attachments/20050422/c174e6d0/attachment.pgp>
+
+From btrichter at ucdavis.edu  Sun Apr 24 00:41:44 2005
+From: btrichter at ucdavis.edu (Bryan Richter)
+Date: Sat, 23 Apr 2005 15:41:44 -0700
+Subject: [gcc-c54x-dev] code and licensing
+Message-ID: <20050423224144.GA22678@frodo-the-cat>
+
+Hey everyone,
+
+I've been looking into the legal issues surrounding administering a project that
+would eventually be integrated into a GNU project. Basically, they are a pain in
+the butt. To contribute anything significant to GCC, one has to sign over their
+copyright to the FSF. That means that for this project to be accepted into GCC,
+either you would all have to sign copy rights to me (and I would later sign mine
+over to the FSF), or all of us would have to sign them to the FSF before
+contributing.
+
+Another issue is that I'm not even sure it's best to have a separate project. To
+be honest, the idea occurred to me only because the two projects I'm familiar
+with (cris and the stagnant SF tic54x) both started out as separate from GCC.
+Really, though, there is no reason we can't just work on GCC, itself. We have to
+deal with copyright papers, anyway, and if we joined the project would be more
+visible and in the company of many more experts. 
+
+Therefore, in spite of the work I've put in to BerliOS in the last week, I
+propose we abandon it and just hack on GCC proper. We have each other's
+addresses, we can still hang out in our own IRC channel, and we can all
+subscribe to gcc at gcc.gnu.org, so we'll be in touch. The truth is I just can't
+justify having a separate project. 
+
+Besides, it'll be fun to be part of that amazing group of hackers. :)
+
+-Bryan
+
+-- 
+Bryan Richter
+UCDTT President
+UC Davis Undergrad, Physics Dept.
+-
+A PGP signature is (probably) attached to this email. 
+PGP Key ID: BB8E6CCC
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 307 bytes
+Desc: Digital signature
+URL: <https://lists.berlios.de/pipermail/gcc-c54x-dev/attachments/20050423/cdde7a38/attachment.pgp>
+
+From joe at dastyle.net  Sun Apr 24 02:48:29 2005
+From: joe at dastyle.net (Jonathan Bastien-Filiatrault)
+Date: Sat, 23 Apr 2005 20:48:29 -0400
+Subject: [gcc-c54x-dev] code and licensing
+In-Reply-To: <20050423224144.GA22678@frodo-the-cat>
+References: <20050423224144.GA22678@frodo-the-cat>
+Message-ID: <426AECDD.7030105@dastyle.net>
+
+Bryan Richter wrote:
+
+>Hey everyone,
+>
+>I've been looking into the legal issues surrounding administering a project that
+>would eventually be integrated into a GNU project. Basically, they are a pain in
+>the butt. To contribute anything significant to GCC, one has to sign over their
+>copyright to the FSF. That means that for this project to be accepted into GCC,
+>either you would all have to sign copy rights to me (and I would later sign mine
+>over to the FSF), or all of us would have to sign them to the FSF before
+>contributing.
+>  
+>
+I have no problem with that.
+
+>Another issue is that I'm not even sure it's best to have a separate project. To
+>be honest, the idea occurred to me only because the two projects I'm familiar
+>with (cris and the stagnant SF tic54x) both started out as separate from GCC.
+>Really, though, there is no reason we can't just work on GCC, itself. We have to
+>deal with copyright papers, anyway, and if we joined the project would be more
+>visible and in the company of many more experts. 
+>  
+>
+I would agree that more people would be able to help us and this way and 
+it saves the whole "eventual integration" PITA.
+
+>Therefore, in spite of the work I've put in to BerliOS in the last week, I
+>propose we abandon it and just hack on GCC proper. We have each other's
+>addresses, we can still hang out in our own IRC channel, and we can all
+>subscribe to gcc at gcc.gnu.org, so we'll be in touch. The truth is I just can't
+>justify having a separate project. 
+>Besides, it'll be fun to be part of that amazing group of hackers. :)
+>  
+>
+Absolutely, looking forward to it myself.
+
+>-Bryan
+>
+>  
+>
+Cheers,
+Jonathan
+
+

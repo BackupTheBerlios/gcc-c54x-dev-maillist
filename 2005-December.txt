@@ -1,0 +1,197 @@
+From ananaza at iki.fi  Thu Dec 15 14:47:15 2005
+From: ananaza at iki.fi (Antti P Miettinen)
+Date: Thu, 15 Dec 2005 15:47:15 +0200 (EET)
+Subject: [gcc-c54x-dev] gdspsim, qemu
+Message-ID: <20051215.154715.74751531.apm@brigitte.dna.fi>
+
+I sent Sam Couter the below, but as Sam no longer seems to be
+interesed in gcc-c54x, I'm relaying this to the list in case someone
+is interested. I'm not on the list - I hope this gets through..
+
+---8<---8<---8<---8<---8<---8<---8<---8<---8<---8<---8<---
+
+Hello,
+
+I read from the gcc-c54x-dev archive at
+
+http://lists.berlios.de/pipermail/gcc-c54x-dev/2005-June/000015.html
+
+that you were unable to run the test program included in gdspsim. The
+gdspsim code base seems a bit oldish but I did manage to get it
+running, i.e. I can step through the test program and it ends up into
+the "passed" loop.
+
+All I had to do was to make it compile and rearrange the link line so
+that the app gets resolved first against the right gtk. I'm attaching
+a diff.
+
+Have you considered qemu as a simulator framework? I know it is sort
+of a simplification to say this, but in principle, all that is needed
+for supporting a particular CPU inside qemu, is to be able to
+dissassemble the object code. In return you get very fast
+emulation :)
+
+-------------- next part --------------
+? c54/gdspsim
+? gdspsim/test/test1.out
+Index: c54/Makefile
+===================================================================
+RCS file: /cvsroot/gdspsim/gdspsim/c54/Makefile,v
+retrieving revision 1.4
+diff -u -r1.4 Makefile
+--- c54/Makefile	13 Jul 2002 17:17:40 -0000	1.4
++++ c54/Makefile	14 Dec 2005 20:22:28 -0000
+@@ -179,12 +179,12 @@
+ 
+ #$(OBJS):	$(SRCS) $(DEPS)
+ .c.o:
+-	$(CC) -Wall -ggdb -I../c54 -I../gdspsim -I. -I.. `pkg-config gnome gtk+ --cflags`   -c -D_C54 $<
++	$(CC) -Wall -ggdb -I../c54 -I../gdspsim -I. -I.. `pkg-config libgnome-2.0 gtk+ --cflags`   -c -D_C54 $<
+ 
+ all:	$(PROGRAM)
+ 
+ $(PROGRAM):	$(OBJS)
+-		$(CC) `pkg-config gnome gtk+ --libs` -o $(PROGRAM) $(OBJS) -lgtkextra
++		$(CC) `pkg-config gtk+ libgnome-2.0 --libs` -o $(PROGRAM) $(OBJS) -lgtkextra
+ 		@echo "done"
+ #		$(CC) -rdynamic `pkg-config gtk+  --libs`  -lgtkextra -o $(PROGRAM) $(OBJS)
+ 
+Index: gdspsim/main.c
+===================================================================
+RCS file: /cvsroot/gdspsim/gdspsim/gdspsim/main.c,v
+retrieving revision 1.16
+diff -u -r1.16 main.c
+--- gdspsim/main.c	7 May 2003 02:34:52 -0000	1.16
++++ gdspsim/main.c	14 Dec 2005 20:22:29 -0000
+@@ -29,7 +29,7 @@
+ #include <pipeline.h>
+ #include <fileIO.h>
+ #include <preferences.h>
+-#include <gnome.h>
++#include <libgnome/libgnome.h>
+ 
+ extern struct _file_info *gdsp_file_nfo;
+ struct _Registers *Registers;
+@@ -75,13 +75,13 @@
+ {
+   gchar *helpfile;
+ 
+-  helpfile = gnome_help_file_find_file("gdspsim","gdspsim.html");
++  helpfile = 0; /*gnome_help_file_find_file("gdspsim","gdspsim.html");*/
+   if (helpfile != NULL)
+     {
+       gchar *url;
+ 
+       url = g_strconcat("file:",helpfile,NULL);
+-      gnome_help_goto(NULL,url);
++      //gnome_help_goto(NULL,url);
+       g_free(url);
+       g_free(helpfile);
+     }
+
+From ramana.radhakrishnan at codito.com  Thu Dec 15 15:05:29 2005
+From: ramana.radhakrishnan at codito.com (Ramana Radhakrishnan)
+Date: Thu, 15 Dec 2005 19:35:29 +0530
+Subject: [gcc-c54x-dev] gdspsim, qemu
+In-Reply-To: <20051215.154715.74751531.apm@brigitte.dna.fi>
+References: <20051215.154715.74751531.apm@brigitte.dna.fi>
+Message-ID: <1134655530.27383.19.camel@localhost.localdomain>
+
+Thanks for the update. I will give it a shot over the weekend. 
+
+No we haven't yet considered qemu though it looks very interesting. I
+have been looking at getting the cgen implementation up in my spare time
+scarce as it is . 
+
+
+cheers
+Ramana
+
+On Thu, 2005-12-15 at 15:47 +0200, Antti P Miettinen wrote:
+> I sent Sam Couter the below, but as Sam no longer seems to be
+> interesed in gcc-c54x, I'm relaying this to the list in case someone
+> is interested. I'm not on the list - I hope this gets through..
+> 
+> ---8<---8<---8<---8<---8<---8<---8<---8<---8<---8<---8<---
+> 
+> Hello,
+> 
+> I read from the gcc-c54x-dev archive at
+> 
+> http://lists.berlios.de/pipermail/gcc-c54x-dev/2005-June/000015.html
+> 
+> that you were unable to run the test program included in gdspsim. The
+> gdspsim code base seems a bit oldish but I did manage to get it
+> running, i.e. I can step through the test program and it ends up into
+> the "passed" loop.
+> 
+> All I had to do was to make it compile and rearrange the link line so
+> that the app gets resolved first against the right gtk. I'm attaching
+> a diff.
+> 
+> Have you considered qemu as a simulator framework? I know it is sort
+> of a simplification to say this, but in principle, all that is needed
+> for supporting a particular CPU inside qemu, is to be able to
+> dissassemble the object code. In return you get very fast
+> emulation :)
+> 
+> plain text document attachment (gdspsim.diff)
+> ? c54/gdspsim
+> ? gdspsim/test/test1.out
+> Index: c54/Makefile
+> ===================================================================
+> RCS file: /cvsroot/gdspsim/gdspsim/c54/Makefile,v
+> retrieving revision 1.4
+> diff -u -r1.4 Makefile
+> --- c54/Makefile	13 Jul 2002 17:17:40 -0000	1.4
+> +++ c54/Makefile	14 Dec 2005 20:22:28 -0000
+> @@ -179,12 +179,12 @@
+>  
+>  #$(OBJS):	$(SRCS) $(DEPS)
+>  .c.o:
+> -	$(CC) -Wall -ggdb -I../c54 -I../gdspsim -I. -I.. `pkg-config gnome gtk+ --cflags`   -c -D_C54 $<
+> +	$(CC) -Wall -ggdb -I../c54 -I../gdspsim -I. -I.. `pkg-config libgnome-2.0 gtk+ --cflags`   -c -D_C54 $<
+>  
+>  all:	$(PROGRAM)
+>  
+>  $(PROGRAM):	$(OBJS)
+> -		$(CC) `pkg-config gnome gtk+ --libs` -o $(PROGRAM) $(OBJS) -lgtkextra
+> +		$(CC) `pkg-config gtk+ libgnome-2.0 --libs` -o $(PROGRAM) $(OBJS) -lgtkextra
+>  		@echo "done"
+>  #		$(CC) -rdynamic `pkg-config gtk+  --libs`  -lgtkextra -o $(PROGRAM) $(OBJS)
+>  
+> Index: gdspsim/main.c
+> ===================================================================
+> RCS file: /cvsroot/gdspsim/gdspsim/gdspsim/main.c,v
+> retrieving revision 1.16
+> diff -u -r1.16 main.c
+> --- gdspsim/main.c	7 May 2003 02:34:52 -0000	1.16
+> +++ gdspsim/main.c	14 Dec 2005 20:22:29 -0000
+> @@ -29,7 +29,7 @@
+>  #include <pipeline.h>
+>  #include <fileIO.h>
+>  #include <preferences.h>
+> -#include <gnome.h>
+> +#include <libgnome/libgnome.h>
+>  
+>  extern struct _file_info *gdsp_file_nfo;
+>  struct _Registers *Registers;
+> @@ -75,13 +75,13 @@
+>  {
+>    gchar *helpfile;
+>  
+> -  helpfile = gnome_help_file_find_file("gdspsim","gdspsim.html");
+> +  helpfile = 0; /*gnome_help_file_find_file("gdspsim","gdspsim.html");*/
+>    if (helpfile != NULL)
+>      {
+>        gchar *url;
+>  
+>        url = g_strconcat("file:",helpfile,NULL);
+> -      gnome_help_goto(NULL,url);
+> +      //gnome_help_goto(NULL,url);
+>        g_free(url);
+>        g_free(helpfile);
+>      }
+
+
+

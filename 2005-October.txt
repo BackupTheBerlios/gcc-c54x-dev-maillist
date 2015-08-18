@@ -1,0 +1,400 @@
+From adam.torgerson at gmail.com  Tue Oct  4 02:55:25 2005
+From: adam.torgerson at gmail.com (Adam Torgerson)
+Date: Mon, 3 Oct 2005 18:55:25 -0600
+Subject: [gcc-c54x-dev] From the ashes, weekly IRC meeting
+Message-ID: <bd550ca70510031755g2320588bt5a44a2c7119ec919@mail.gmail.com>
+
+We're not dead! Bryan and I have set up a weekly IRC meeting at
+2030PDT in the usual place. We hope to discuss how to get things
+restarted, what needs doing next, etc. If you are interested in
+helping with this project in any way, I'd love to see you there.
+
+adam
+
+
+From btrichter at ucdavis.edu  Tue Oct  4 02:59:14 2005
+From: btrichter at ucdavis.edu (Bryan Richter)
+Date: Mon, 3 Oct 2005 17:59:14 -0700
+Subject: [gcc-c54x-dev] From the ashes, weekly IRC meeting
+In-Reply-To: <bd550ca70510031755g2320588bt5a44a2c7119ec919@mail.gmail.com>
+References: <bd550ca70510031755g2320588bt5a44a2c7119ec919@mail.gmail.com>
+Message-ID: <20051004005914.GA15425@blaze.notadns>
+
+(quoting Adam Torgerson):
+> We're not dead! Bryan and I have set up a weekly IRC meeting at 2030PDT
+> in the usual place. 
+
+I.e. #gcc-c54x on irc.freenode.org. :)
+
+> We hope to discuss how to get things restarted, what needs doing next,
+> etc. If you are interested in helping with this project in any way, I'd
+> love to see you there.
+> 
+> adam
+
+-Bryan
+
+-- 
+Bryan Richter
+System Administrator
+-
+iRadeon
+
+
+
+From ramana.radhakrishnan at codito.com  Tue Oct  4 08:08:07 2005
+From: ramana.radhakrishnan at codito.com (Ramana Radhakrishnan)
+Date: Tue, 04 Oct 2005 11:38:07 +0530
+Subject: [gcc-c54x-dev] From the ashes, weekly IRC meeting
+In-Reply-To: <bd550ca70510031755g2320588bt5a44a2c7119ec919@mail.gmail.com>
+References: <bd550ca70510031755g2320588bt5a44a2c7119ec919@mail.gmail.com>
+Message-ID: <1128406088.8343.2.camel@localhost.localdomain>
+
+On Mon, 2005-10-03 at 18:55 -0600, Adam Torgerson wrote:
+> We're not dead! Bryan and I have set up a weekly IRC meeting at
+> 2030PDT in the usual place. We hope to discuss how to get things
+> restarted, what needs doing next, etc. If you are interested in
+> helping with this project in any way, I'd love to see you there.
+
+
+That sounds good. Whats 2030 PDT ?
+> 
+> adam
+> _______________________________________________
+> gcc-c54x-dev mailing list
+> gcc-c54x-dev at lists.berlios.de
+> http://lists.berlios.de/mailman/listinfo/gcc-c54x-dev
+
+
+
+From btrichter at ucdavis.edu  Tue Oct  4 08:34:16 2005
+From: btrichter at ucdavis.edu (Bryan Richter)
+Date: Mon, 3 Oct 2005 23:34:16 -0700
+Subject: [gcc-c54x-dev] From the ashes, weekly IRC meeting
+In-Reply-To: <1128406088.8343.2.camel@localhost.localdomain>
+References: <bd550ca70510031755g2320588bt5a44a2c7119ec919@mail.gmail.com> <1128406088.8343.2.camel@localhost.localdomain>
+Message-ID: <20051004063416.GC29754@crimson>
+
+(quoting Ramana Radhakrishnan):
+> On Mon, 2005-10-03 at 18:55 -0600, Adam Torgerson wrote:
+> > We're not dead! Bryan and I have set up a weekly IRC meeting at
+> > 2030PDT in the usual place. We hope to discuss how to get things
+> > restarted, what needs doing next, etc. If you are interested in
+> > helping with this project in any way, I'd love to see you there.
+> 
+> 
+> That sounds good. Whats 2030 PDT ?
+
+I've already talked to Ramana, but for everyone else:
+
+2030 PDT is 20:30 PDT, i.e. 8:30PM PDT, i.e. 3:30AM GMT (sorry, Europeans!
+We (I) didn't think about that until just now). 
+
+I have spoken to Austrians, Indians, Canadians, and Americans concerning
+this project. So, I know it will be very hard to find an ideal time. If you
+want to join, but can't because you are in bed, let me know. We probably
+can't fit everybody in, but we'll try. :)
+
+-Bryan
+
+-- 
+Bryan Richter
+
+
+From nerochiaro at gmail.com  Tue Oct  4 16:31:02 2005
+From: nerochiaro at gmail.com (nerochiaro)
+Date: Tue, 4 Oct 2005 16:31:02 +0200
+Subject: [gcc-c54x-dev] From the ashes, weekly IRC meeting
+In-Reply-To: <bd550ca70510031755g2320588bt5a44a2c7119ec919@mail.gmail.com>
+References: <bd550ca70510031755g2320588bt5a44a2c7119ec919@mail.gmail.com>
+Message-ID: <a40596df0510040731x479b7b99td7c03200ca6df51f@mail.gmail.com>
+
+> We're not dead! Bryan and I have set up a weekly IRC meeting at
+> 2030PDT in the usual place.
+
+Unless my english deceive me, "weekly" means "once each week"... but
+on which day ?
+
+Apart of that, since the time is a bit late for me (i'm in GMT+1, so
+it's past 4 in the night) i'll try at least to read some logs, if you
+plan on making them available after the meeting.
+If so, post here an url for them.
+
+Also, once you nail down a date and a time, if you want a post
+announcing that on open.neurosaudio.com, just let me know.
+
+Have a nice day,
+--
+nero
+
+
+From ramana.radhakrishnan at codito.com  Tue Oct  4 16:44:29 2005
+From: ramana.radhakrishnan at codito.com (Ramana Radhakrishnan)
+Date: Tue, 04 Oct 2005 20:14:29 +0530
+Subject: [gcc-c54x-dev] From the ashes, weekly IRC meeting
+In-Reply-To: <a40596df0510040731x479b7b99td7c03200ca6df51f@mail.gmail.com>
+References: <bd550ca70510031755g2320588bt5a44a2c7119ec919@mail.gmail.com>
+	 <a40596df0510040731x479b7b99td7c03200ca6df51f@mail.gmail.com>
+Message-ID: <1128437069.8399.3.camel@localhost.localdomain>
+
+On Tue, 2005-10-04 at 16:31 +0200, nerochiaro wrote:
+> > We're not dead! Bryan and I have set up a weekly IRC meeting at
+> > 2030PDT in the usual place.
+> 
+> Unless my english deceive me, "weekly" means "once each week"... but
+> on which day ?
+> 
+> Apart of that, since the time is a bit late for me (i'm in GMT+1, so
+> it's past 4 in the night) i'll try at least to read some logs, if you
+> plan on making them available after the meeting.
+> If so, post here an url for them.
+
+I guess it was Monday night 8:30 p.m. PDT . 
+
+cheers
+Ramana
+
+
+
+
+From adam.torgerson at gmail.com  Tue Oct  4 16:54:59 2005
+From: adam.torgerson at gmail.com (Adam Torgerson)
+Date: Tue, 4 Oct 2005 08:54:59 -0600
+Subject: [gcc-c54x-dev] From the ashes, weekly IRC meeting
+In-Reply-To: <1128437069.8399.3.camel@localhost.localdomain>
+References: <bd550ca70510031755g2320588bt5a44a2c7119ec919@mail.gmail.com>
+	 <a40596df0510040731x479b7b99td7c03200ca6df51f@mail.gmail.com>
+	 <1128437069.8399.3.camel@localhost.localdomain>
+Message-ID: <bd550ca70510040754p4be75c08qa49915d648bd82d8@mail.gmail.com>
+
+On 10/4/05, Ramana Radhakrishnan <ramana.radhakrishnan at codito.com> wrote:
+> On Tue, 2005-10-04 at 16:31 +0200, nerochiaro wrote:
+> > > We're not dead! Bryan and I have set up a weekly IRC meeting at
+> > > 2030PDT in the usual place.
+> >
+> > Unless my english deceive me, "weekly" means "once each week"... but
+> > on which day ?
+> >
+> > Apart of that, since the time is a bit late for me (i'm in GMT+1, so
+> > it's past 4 in the night) i'll try at least to read some logs, if you
+> > plan on making them available after the meeting.
+> > If so, post here an url for them.
+>
+> I guess it was Monday night 8:30 p.m. PDT .
+
+Haha, I can't believe I left that out. Yes, we were thinking Monday.
+If there is a better time for people please suggest something else.
+
+
+From ramana.radhakrishnan at codito.com  Mon Oct 10 16:55:44 2005
+From: ramana.radhakrishnan at codito.com (Ramana Radhakrishnan)
+Date: Mon, 10 Oct 2005 20:25:44 +0530
+Subject: [gcc-c54x-dev] From the ashes, weekly IRC meeting
+In-Reply-To: <bd550ca70510040754p4be75c08qa49915d648bd82d8@mail.gmail.com>
+References: <bd550ca70510031755g2320588bt5a44a2c7119ec919@mail.gmail.com>
+	 <a40596df0510040731x479b7b99td7c03200ca6df51f@mail.gmail.com>
+	 <1128437069.8399.3.camel@localhost.localdomain>
+	 <bd550ca70510040754p4be75c08qa49915d648bd82d8@mail.gmail.com>
+Message-ID: <1128956144.20742.3.camel@localhost.localdomain>
+
+Hi,
+
+I presume we are on for the time agreed . Unless there are some
+Europeans who would like it changed ? I will have to drop off at 9:30
+a.m. IST (Indian Standard Time) =  9p.m. PDT  = 4:00 a.m. GMT since I
+have something rather urgent. 
+
+cheers
+Ramana
+
+
+
+> > >
+> > > Unless my english deceive me, "weekly" means "once each week"... but
+> > > on which day ?
+> > >
+> > > Apart of that, since the time is a bit late for me (i'm in GMT+1, so
+> > > it's past 4 in the night) i'll try at least to read some logs, if you
+> > > plan on making them available after the meeting.
+> > > If so, post here an url for them.
+> >
+> > I guess it was Monday night 8:30 p.m. PDT .
+> 
+> Haha, I can't believe I left that out. Yes, we were thinking Monday.
+> If there is a better time for people please suggest something else.
+> _______________________________________________
+> gcc-c54x-dev mailing list
+> gcc-c54x-dev at lists.berlios.de
+> http://lists.berlios.de/mailman/listinfo/gcc-c54x-dev
+
+
+
+From btrichter at ucdavis.edu  Tue Oct 11 06:42:38 2005
+From: btrichter at ucdavis.edu (Bryan Richter)
+Date: Mon, 10 Oct 2005 21:42:38 -0700
+Subject: [gcc-c54x-dev] meeting update
+Message-ID: <20051011044238.GA27287@crimson>
+
+Hi everyone,
+
+may1937, ramana and I just had a meeting on IRC. We talked about what we
+need to do, and what we should focus on. We decided that the best first
+step is to create a working simulator. This will help all of us understand
+more about the architecture. 
+
+We want to start from anew (not using gdspsim), and there are three
+options we can pursue: cgen, igen, or from scratch. igen and cgen are
+simulator generators, and cgen even generates binutils and some other
+stuff. We haven't decided which we want to pursue yet, but cgen looks the
+snazziest.
+
+We will have logs of the previous meeting on the website,
+http://gcc-c54x.berlios.de, as soon as we learn enough html to get it up
+there. ;) The next meeting is tentatively scheduled for Tuesday, 18 Oct,
+15:00 GMT (8am California, 4pm Austria, 8:30pm India). If that doesn't work
+for someone, let me know.
+
+Talk to you later,
+
+-Bryan
+
+-- 
+Bryan Richter
+
+
+From mrkrishnan at gmail.com  Tue Oct 11 06:49:15 2005
+From: mrkrishnan at gmail.com (Ramakrishnan Muthukrishnan)
+Date: Tue, 11 Oct 2005 10:19:15 +0530
+Subject: [gcc-c54x-dev] meeting update
+In-Reply-To: <20051011044238.GA27287@crimson>
+References: <20051011044238.GA27287@crimson>
+Message-ID: <8fcc35a0510102149v3abcfa5cia76728197e2d3351@mail.gmail.com>
+
+On 10/11/05, Bryan Richter <btrichter at ucdavis.edu> wrote:
+
+> We will have logs of the previous meeting on the website,
+> http://gcc-c54x.berlios.de, as soon as we learn enough html to get it up
+> there. ;) The next meeting is tentatively scheduled for Tuesday, 18 Oct,
+
+http://freshmeat.net/projects/irclog2html.pl/
+
+--
+  73, Ramakrishnan - VU3RDD
+
+
+From pitt at segfault.info  Thu Oct 13 21:49:12 2005
+From: pitt at segfault.info (Christoph Pittracher)
+Date: Thu, 13 Oct 2005 21:49:12 +0200
+Subject: [gcc-c54x-dev] meeting update
+In-Reply-To: <20051011044238.GA27287@crimson>
+References: <20051011044238.GA27287@crimson>
+Message-ID: <200510132149.13042@pitt.segfault.info>
+
+Hi,
+
+On Tuesday 11 October 2005 06:42, Bryan Richter wrote:
+> We will have logs of the previous meeting on the website,
+> http://gcc-c54x.berlios.de, as soon as we learn enough html to get it
+> up there. ;) The next meeting is tentatively scheduled for Tuesday,
+> 18 Oct, 15:00 GMT (8am California, 4pm Austria, 8:30pm India). If
+> that doesn't work for someone, let me know.
+
+4pm Austria is generally a good time, but on Monday and Tuesday 4pm I've 
+a physics lecture at the university.
+
+Three options:
+3pm, but I suggest 7am is too early for California
+7pm -> 8:30pm for India...?
+Any other day than Monday/Tuesday at 4pm.
+
+However, I'm a bit overloaded with work and studies so don't expect too 
+much coding.
+It's ok if you choose a date which is suboptimal for me. I'll read the 
+logs and post my minds to the mailing list.
+
+regards,
+Christoph
+-- 
+/> http://segfault.info     /> IS NOT A CRIME       \\ 
+\\                         //                        \\
+ \\           OPEN SOURCE </      pitt at segfault.info </
+  PGP http://segfault.info/authors/pitt.asc
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: application/pgp-signature
+Size: 189 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/gcc-c54x-dev/attachments/20051013/8faf4563/attachment.pgp>
+
+From bryanr at iradeon.net  Tue Oct 18 22:47:32 2005
+From: bryanr at iradeon.net (Bryan Richter)
+Date: Tue, 18 Oct 2005 13:47:32 -0700
+Subject: [gcc-c54x-dev] meeting notes - 18 Oct
+Message-ID: <20051018204732.GE14588@blaze.notadns>
+
+Hello everyone,
+
+This "morning", we had another of our weekly meetings. Adam (may1937) and I
+were the two attendees. We talked about cgen a little, but there is little
+to actually report. :)
+
+Both Adam and I can only spend a few hours a week on the project. We are
+still reading the cgen docs, and I don't think either of us will have more
+to say until we know more about it.
+
+I'll announce the time/date of the next meeting in a day or so. I'd really
+enjoy it if more people were able to attend, because two people.. well,
+it's not much of a 'meeting'. :) It doesn't matter if you don't have time
+to contribute, or know less about cgen or the c54x or gcc than we do (a
+difficult feat, to be sure) -- having more people to talk to and bounce
+ideas off of would be great.
+
+Ok, see you all later.
+
+-Bryan
+
+-- 
+Bryan Richter
+System Administrator
+-
+iRadeon
+
+
+
+From adam.torgerson at gmail.com  Thu Oct 20 07:11:53 2005
+From: adam.torgerson at gmail.com (Adam Torgerson)
+Date: Wed, 19 Oct 2005 23:11:53 -0600
+Subject: [gcc-c54x-dev] Ramana's initial cpu checked in
+Message-ID: <bd550ca70510192211q66deb34fn7b54499c9cae0dd7@mail.gmail.com>
+
+I created a new directory under trunk and checked Ramana's start into
+subversion.
+
+Adam
+
+
+From btrichter at ucdavis.edu  Tue Oct 25 00:00:34 2005
+From: btrichter at ucdavis.edu (Bryan Richter)
+Date: Mon, 24 Oct 2005 15:00:34 -0700
+Subject: [gcc-c54x-dev] This week's meeting
+Message-ID: <20051024220034.GA8841@blaze.notadns>
+
+Hi everyone, I apologize for the tardiness of this email. I was undecided
+on which time we should have it the next meeting. However, I think that
+3:30am GMT, Tuesday works the best for the three of us that come. That is
+8:30pm PDT (Monday) in California and 8:00am (Tuesday) in India. 
+
+We will obviously change the time if a European wishes to join us, so don't
+be afraid to ask. Otherwise, see you all there. :)
+
+-Bryan
+
+-- 
+Bryan Richter
+System Administrator
+-
+iRadeon
+
+
+

@@ -1,0 +1,28 @@
+From btrichter at ucdavis.edu  Fri Nov  4 02:04:06 2005
+From: btrichter at ucdavis.edu (Bryan Richter)
+Date: Thu, 3 Nov 2005 17:04:06 -0800
+Subject: [gcc-c54x-dev] signing off
+Message-ID: <20051104010406.GB14017@crimson>
+
+Hey guys, 
+
+I don't think I will be contributing code to this project anymore. I
+really don't have enough time. What's more, sytems programming isn't even
+really my area of interest (I started working on this solely so I could
+work on the Neuros's interface, which _is_ one of my interests). Besides, I
+haven't been contributing code anyway, so this is mainly a change towards
+accurately representing my role in the project. :-P
+
+Also, I might still help out, or at least read docs and offer suggestions.
+I might even continue to spruce up the website. However, I am officially
+declaring that I Am Not Promising Anything. ;) Also, I would like to give 
+up the role of 'Project Lead'. Even though it's mostly ceremonial, I think
+it would be better suited to someone else. 
+
+Anyways, best of luck to you all. I'll still hang out in #gcc-c54x, so I'll
+see you around.
+
+-Bryan
+
+
+
